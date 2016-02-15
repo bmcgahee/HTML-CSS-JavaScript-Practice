@@ -1,0 +1,76 @@
+body {
+
+background-color: #00BBFF;
+font-family: monospace;
+
+}
+
+h1 {
+
+color: #AAFFCC;
+font-style: italic;
+font-weight: 700;
+font-size: 1.75em;
+
+}
+
+#pnote {
+
+color: #FFFFFF;
+font-weight: 500;
+font-size: 1.2em;
+padding: 2px;
+
+}
+
+#info {
+
+font-size: 1.5em;
+font-weight: 250;
+padding: 3px;
+
+}
+
+#info input[type = text] {
+
+width: 300px;
+height: 15px;
+
+}
+
+#info input[type = submit] {
+
+font-weight: bold;
+font-size: 0.9em;
+text-align: center;
+height: 30px;
+width: 100px;
+background-color: yellow;
+
+
+}
+
+#credentials {
+
+font-size: 1.5em;
+font-weight: 250;
+padding: 3px;
+
+}
+
+#credentials input[type = text] {
+
+width: 250px;
+height: 15px;
+
+}
+
+#reset input[type = button] {
+
+font-weight: bold;
+font-size: 0.9em;
+height: 30px;
+width: 215px;
+background-color: yellow;
+
+}
