@@ -1,0 +1,56 @@
+<!doctype html>
+   <head>
+   <meta charset = "utf-8">
+   <link rel = "stylesheet" type = "text/css" href = "memberstyles.css">
+      <title>Membership Form</title> 
+   </head>
+   <body>
+      <h1>Enter your personal information and credentials below.</h1>
+      <p id = "pnote">Note: A maximum number of 2 characters are allowed for the state and 5 characters are allowed for the zipcode.<br>
+      A maximum of 10 characters are allowed for the username and 8 characters are allowed for the password.<br>
+      You must complete all fields before clicking the <q>Join</q> button.</p>
+
+      <form id = "info" method = "post" action = "">
+        <p>
+        Name: <input type = "text" name = "name" />
+        </p>
+        <p>
+        Address: <input type = "text" name = "address" />
+        </p>
+        <p>
+        City: <input type = "text" name = "city" />
+        </p>
+        <p>
+        State: <input type = "text" name = "state" />
+        </p>
+        <p>
+        Zipcode: <input type = "text" name = "zipcode" />
+        </p>
+        <p>
+        <input type = "submit" name = "submit" value = "Join" />
+        </p>
+       </form>
+
+      <form id = "credentials" name = "credentials">
+          <h3>Username:</h3><input type = "text" name = "username" value = "">
+          <h3>Password:</h3><input type = "password" name = "password" value = "">
+      </form>
+      
+      <p id = "reset">
+      <input align = "left" id = "personalReset" onclick = "resetPersonalInfo()" type = "button" value = "Reset Personal Information">
+      <input align = "middle" id = "credentialsReset" onclick = "resetCredentials()" type = "button" value = "Reset Credentials">
+      </p>
+
+      <script>
+
+         function resetPersonalInfo() {
+            document.getElementById("info").reset();
+         }
+
+         function resetCredentials() {
+	    document.getElementById("credentials").reset();         }
+      
+      </script>
+   </body>
+</html>
+
