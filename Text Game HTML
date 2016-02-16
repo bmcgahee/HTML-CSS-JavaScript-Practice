@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+   <head>
+     <meta charset = "utf-8">
+     <link rel = "stylesheet" type = "text/css" href = "textgamestyle.css">
+     <title>Text Game</title>
+     <script type = "text/javascript" src = "textgame.js"></script>
+   </head>
+   <body>
+     <h1 id = "welcome">Welcome to the Text Game!</h1>
+     <h1 id = "name">What is your name?</h1>
+     <input type = "text" id = "nameTextBox" />
+     <input type = "submit" value = "Enter Name" onclick = "nameResponse()" />
+     <h1 id = "age">How old are you?</h1>
+     <input type = "text" id = "ageTextBox" />
+     <input type = "submit" value = "Enter Age" onclick = "ageResponse()" />
+    </body>
+</html>
