@@ -1,0 +1,51 @@
+body {
+
+background-color: green;
+font-family: Helvetica, Arial, Times;
+
+}
+
+#welcome {
+
+color: white;
+font-style: italic;
+font-weight: 700;
+font-size: 2.1em;
+text-shadow: 2px 2px red;
+
+}
+
+#name {
+
+color: white;
+font-weight: 300;
+font-size: 1.5em;
+
+}
+
+#nameTextBox {
+
+width: 250px;
+height: 15px;
+
+}
+
+#age {
+
+color: white;
+font-weight: 300;
+font-size: 1.5em;
+
+}
+
+#ageTextBox {
+
+width: 45px;
+height: 15px;
+
+}
+
+
+
+
+
