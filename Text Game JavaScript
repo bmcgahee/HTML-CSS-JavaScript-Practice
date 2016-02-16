@@ -1,0 +1,41 @@
+
+        function nameResponse() {
+
+	         var result = document.getElementById("nameTextBox").value;
+
+           if(result.length == 0) {
+	          alert("Please enter your name in the text box and click Enter Name button.");
+	          return;
+           }
+	        else if(!isNaN(result)) {
+	         alert("Please enter a valid name in the text box and click the Enter Name button.");
+	         return;
+           }
+           else {
+            var response = document.getElementById("name");
+            response.innerHTML = "Hello, " + result + ".";
+           }
+          }
+
+         function ageResponse() {
+	
+       	    var result = document.getElementById("ageTextBox").value;
+
+            if(result.length == 0) 
+              alert("Please enter your age in the text box and click the Enter Age button.");
+            else if(result < 0 || isNaN(result))
+              alert("That is not a valid age.  Please enter your age in the text box and click the Enter Age button.");
+            else {
+              var response = document.getElementById("age");
+              if(result == 1)
+                 response.innerHTML = "You are " + result + " year old and fairly young!";
+              else if(result >= 0 && result <= 49)
+                  response.innerHTML = "You are " + result + " years old and fairly young!";
+              else if(result == 50)
+                 response.innerHTML = "You are " + result + " years old and over the hill!  Congratulations!";
+              else if(result > 50 && result <= 79)
+                 response.innerHTML = "You are " + result + " years old and in the golden years of your life!";
+              else
+                 response.innerHTML = "You are " + result + " years old. You are getting old!";
+             }
+         }
