@@ -1,0 +1,19 @@
+<!--This is a rollover example using HTML and JavaScript.  You see one image on the website. 
+When you move the mouse over the image, you see another image.  Pretty cool! :) -->
+<html>
+  <head>
+     <title>Rollover Pictures</title>
+     <script type = "text/javascript">
+         if(document.images) {
+	   var firstImage = new Image();
+           firstImage.src = "C:/Users/Ben/Documents/Websites/images/Ben_UGADawgs.jpg";
+	   var secondImage = new Image();
+           secondImage.src = "C:/Users/Ben/Documents/Websites/images/Ben.jpg";
+          }
+     </script>
+  </head>
+  <body>
+     <a href = "#" onMouseOver = "document.imRollover.src = firstImage.src;" onMouseOut = "document.imRollover.src = secondImage.src;">
+     <img name = "imRollover" src = "C:/Users/Ben/Documents/Websites/images/Ben.jpg" />
+  </body>
+</html>
