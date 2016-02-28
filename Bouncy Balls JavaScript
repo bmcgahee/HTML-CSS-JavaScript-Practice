@@ -1,0 +1,155 @@
+         //JavaScript file bouncyballs.js
+         //This script performs the animation of the three bouncy balls.  
+         
+	       //Declare the canvas, context, ball, and collision variables.  
+          var space = document.getElementById("space");
+          var context = space.getContext("2d");
+
+          var xRedBall = space.width / 2;
+          var yRedBall = space.height - 15;
+          var redBallAngle = 60;
+          var xRedBallSpeed = 5 * Math.cos(redBallAngle * Math.PI / 180);
+          var yRedBallSpeed = 5 * Math.sin(redBallAngle * Math.PI / 180);
+          var radiusRedBall = 15;
+
+          var xGreenBall = space.width / 3;
+          var yGreenBall = space.height - 15;
+          var greenBallAngle = 50;
+          var xGreenBallSpeed = 4.5 * Math.cos(greenBallAngle * Math.PI / 180);
+          var yGreenBallSpeed = 4.5 * Math.sin(greenBallAngle * Math.PI / 180);
+          var radiusGreenBall = 15;
+
+          var xBlackBall = space.width / 4 ;
+          var yBlackBall = space.height / 4;
+          var blackBallAngle = 40;
+          var xBlackBallSpeed = 4 * Math.cos(greenBallAngle * Math.PI / 180);
+          var yBlackBallSpeed = 4 * Math.sin(greenBallAngle * Math.PI / 180);
+          var radiusBlackBall = 15;
+          
+          var xEdgeBall = space.width - radiusRedBall;
+          var yEdgeBall = space.height - radiusGreenBall;
+          var diameter = radiusRedBall + radiusGreenBall;
+
+          var collisions = 0;
+
+          //Draws the red ball.
+          function renderRedBall() {
+	            context.beginPath();
+              context.arc(xRedBall, yRedBall, radiusRedBall, 0, Math.PI * 2);
+              context.fillStyle = "red";
+              context.fill();
+              context.closePath();
+          }
+
+	        //Draws the green ball.
+          function renderGreenBall() {
+	            context.beginPath();
+              context.arc(xGreenBall, yGreenBall, radiusGreenBall, 0, Math.PI * 2);
+              context.fillStyle = "green";
+              context.fill();
+              context.closePath();
+          }
+
+          //Draws the black ball.
+          function renderBlackBall() {
+	            context.beginPath();
+              context.arc(xBlackBall, yBlackBall, radiusBlackBall, 0, Math.PI * 2);
+              context.fillStyle = "black";
+              context.fill();
+              context.closePath();
+          }
+
+          //Counts the number of collisions when the balls collide.
+          function collisionCount() {
+              context.font = "16px Arial";
+              context.fillStyle = "black";
+              context.fillText("Collisions: " + collisions, 185, 480);
+          }
+
+          //Draws the screen and balls.
+          function renderSpace() {
+	            context.clearRect(0, 0, space.width, space.height);
+              renderRedBall();
+              renderGreenBall();
+              renderBlackBall();
+              collisionCount();
+
+              xRedBall += xRedBallSpeed;
+              yRedBall += yRedBallSpeed;
+              xGreenBall += xGreenBallSpeed;
+              yGreenBall += yGreenBallSpeed;
+              xBlackBall += xBlackBallSpeed;
+              yBlackBall += yBlackBallSpeed;
+
+              //Declare the variables to calculate the distances between the balls.  
+              var xBallDistance = xRedBall - xGreenBall;
+              var yBallDistance = yRedBall - yGreenBall;
+              var xBallDistanceRedBlack = xRedBall - xBlackBall;
+              var yBallDistanceRedBlack = yRedBall - yBlackBall;
+              var xBallDistanceGreenBlack = xGreenBall - xBlackBall;
+              var yBallDistanceGreenBlack = yGreenBall - yBlackBall;
+              
+
+              var distanceRedGreen = Math.sqrt(xBallDistance * xBallDistance + yBallDistance * yBallDistance);
+              var distanceRedBlack = Math.sqrt(xBallDistanceRedBlack * xBallDistanceRedBlack + yBallDistanceRedBlack * yBallDistanceRedBlack);
+              var distanceGreenBlack = Math.sqrt(xBallDistanceGreenBlack * xBallDistanceGreenBlack + yBallDistanceGreenBlack * yBallDistanceGreenBlack);
+
+              //The case where the red and green balls collide.  
+              if(distanceRedGreen < diameter) {
+                   xRedBallSpeed = -xRedBallSpeed;
+                   yRedBallSpeed = -yRedBallSpeed;
+                   xGreenBallSpeed = -xGreenBallSpeed;
+                   yGreenBallSpeed = -yGreenBallSpeed;
+                   collisions += 1; 
+               }
+
+              //The case where the red and black balls collide.
+              if(distanceRedBlack < diameter) {
+                   xRedBallSpeed = -xRedBallSpeed;
+                   yRedBallSpeed = -yRedBallSpeed;
+                   xBlackBallSpeed = -xBlackBallSpeed;
+                   yBlackBallSpeed = -yBlackBallSpeed;
+		               collisions += 1;
+              }
+
+              //The case where the green and black balls collide.
+              if(distanceGreenBlack < diameter) {
+                   xBlackBallSpeed = -xBlackBallSpeed;
+                   yBlackBallSpeed = -yBlackBallSpeed;
+                   xGreenBallSpeed = -xGreenBallSpeed;
+                   yGreenBallSpeed = -yGreenBallSpeed;
+		               collisions += 1;
+              }
+
+              //The case where the red ball hits the side walls.
+              if(xRedBall < radiusRedBall || xRedBall > xEdgeBall) {
+		               xRedBallSpeed = -xRedBallSpeed;
+              }
+
+              //The case where the red ball hits the ground and celing. 
+              if(yRedBall < radiusRedBall || yRedBall > yEdgeBall) {
+		              yRedBallSpeed = -yRedBallSpeed;
+              }
+
+              //The case where the green ball hits the side walls.
+              if(xGreenBall < radiusGreenBall || xGreenBall > xEdgeBall) {
+		              xGreenBallSpeed = -xGreenBallSpeed;
+	            }
+
+              //The case where the green ball hits the ground and ceiling.
+              if(yGreenBall < radiusGreenBall || yGreenBall > yEdgeBall) {
+                  yGreenBallSpeed = -yGreenBallSpeed; 
+              }
+
+              //The case where the black ball hits the side walls.
+              if(xBlackBall < radiusBlackBall || xBlackBall > xEdgeBall) {
+			            xBlackBallSpeed = -xBlackBallSpeed;
+              }
+
+              //The case where the black ball hits the ground and ceiling.
+              if(yBlackBall < radiusBlackBall || yBlackBall > yEdgeBall) {
+			           yBlackBallSpeed = -yBlackBallSpeed;
+              }
+            }
+          //Renders the animation of the bouncy balls.
+          setInterval(renderSpace, 10);
