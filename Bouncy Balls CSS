@@ -1,0 +1,13 @@
+//CSS file ballstyle.css
+
+//Bouncy Balls Heading is blue and italic.
+#balls {
+color: blue;
+font-style: italic;
+font-weight: 700;
+}
+
+//The background color of the canvas is silver.
+#space {
+background-color: silver;
+}
