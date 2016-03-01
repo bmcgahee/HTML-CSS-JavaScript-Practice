@@ -1,0 +1,116 @@
+//Author: Ben McGahee
+//Title: Clock In/Clock Out Express
+//Date: 2/29/2016
+//Purpose: This application lets a user enter the time clocked in, time clocked out, and hourly pay rate.
+//The program calculates the total time the user worked and how much money the user made for the work day.
+//Note:  For the time in hours from 1 am to 12 pm, use numbers 1 through 12.  
+//For hours from 1 pm to 12 am, use numbers 13 through 24.  Enter any number from 0 to 59 for the time in minutes. 
+
+<script>
+
+//Welcome message to the application.
+alert("Welcome to Clock In/Clock Out Express!");
+alert("Let's calculate how long you worked and how much money you made today.");
+
+//Asks the user to input the hour and minutes for clock in and clock out times.
+var hours1 = prompt("Enter hours for clock in time (any value between 1-24) : ");
+var minutes1 = prompt("Enter minutes for clock in  time (any value between 0-59) : ");
+var hours2 = prompt("Enter hours for clock out time (any value between 1-24) : ");
+var minutes2 = prompt("Enter minutes for clock out time (any value between 0-59) : ");
+var payRate = prompt("Enter your pay rate in dollars per hour: ");
+
+//Sets the two date time objects and passes the hours and minutes values into each Date object.
+var time1 = new Date(0, 0, 0, hours1, minutes1);
+var time2 = new Date(0, 0, 0, hours2, minutes2);
+
+//Time variables get the two times in hours.
+var time1Hour = time1.getHours();
+var time2Hour = time2.getHours();
+
+//Time variables get the two times in minutes.
+var time1Minutes = time1.getMinutes();
+var time2Minutes = time2.getMinutes();
+
+//Declare empty strings for time of day variables.
+var timeOfDay1 = "";
+var timeOfDay2 = "";
+
+//Assign the clock hour variables to the values of the hours of both times respectively.
+var clockHour1 = hours1;
+var clockHour2 = hours2;
+
+//Hour and minute difference variables find the difference in hours and minutes. 
+var hourDiff = Math.abs(hours2 - hours1);
+var minutesDiff = time2Minutes - time1Minutes;
+
+//Case where difference in minutes is negative and difference in hours is non-zero.
+if(minutesDiff < 0 && hourDiff != 0) {
+  minutesDiff += 60;
+  hourDiff -= 1;
+}
+
+//Case where the time hour variables are assigned to value of 12 if they are 0.
+if(time1Hour == 0)
+   time1Hour = 12;
+if(time2Hour == 0)
+   time2Hour = 12;
+
+//Case where first time in hours is between 1 pm and 11 pm.
+if(time1Hour > 12 && time1Hour <= 23) {
+   clockHour1 %= 12;
+   timeOfDay1 = "PM";
+} 
+//Case where the first time is 12 AM or the 24th hour
+else if(hours1 == 24) {
+   clockHour1 = 12;
+   timeOfDay1 = "AM";
+}
+else
+   timeOfDay1 = "AM";
+
+//Same case as before, just for second time.
+if(time2Hour > 12 && time2Hour <= 23) {
+   clockHour2 %= 12;
+   timeOfDay2 = "PM";
+}
+//Same case as before, just for second time.
+else if(hours2 == 24) {
+   clockHour2 = 12;
+   timeOfDay2 = "AM";
+}
+else
+   timeOfDay2 = "AM";
+
+//Case where number of minutes for first time is between 0 and 9, include the 0 after the : symbol.
+if(time1Minutes >= 0 && time1Minutes <= 9)
+   document.write("Your clock in time is: " + clockHour1 + ":0" + time1Minutes + " " + timeOfDay1 + "<br>");
+else
+   document.write("Your clock in time is: " + clockHour1 + ":" + time1Minutes + " " + timeOfDay1 + "<br>");
+
+//Similar to previous case, just for second time.
+if(time2Minutes >= 0 && time2Minutes <= 9)
+   document.write("Your clock out time is: " + clockHour2 + ":0" + time2Minutes + " " + timeOfDay2 + "<br>");
+else
+   document.write("Your clock out time is: " + clockHour2 + ":" + time2Minutes + " " + " " + timeOfDay2 + "<br>");
+
+document.write("You worked for: " + hourDiff + " hours and " + minutesDiff + " minutes" + "<br>");
+
+//Converts minutes to hours.
+var minutesToHours = minutesDiff / 60;
+
+//Adds the hours and the previous value together to get total work time.
+var workTime = hourDiff + minutesToHours;
+
+//Amount of money is hourly rate times hours worked.
+var amount = payRate * workTime;
+
+//Round the dollar amount to two decimal places.
+var amountRounded = Math.round(amount * 100) / 100;
+
+//Display the amount earned for the work day.
+document.write("You earned: " + "$" + amountRounded);
+
+//Exit message that ends the application.
+alert("Thank you for using Clock In/Clock Out Express!");
+
+</script>
