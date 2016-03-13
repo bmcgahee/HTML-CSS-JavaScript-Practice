@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+   <head>
+     <meta charset = "utf-8" />
+     <link rel = "stylesheet" href = "projectile.css">
+     <title>Projectile Motion</title>
+   </head>
+   <body>
+      <h1 id = "proj">Projectile Motion</h1>
+      <p id = "par">Initial Height:<input type = "text" id = "height" />(meters)<br />
+      Initial Velocity:<input type = "text" id = "speed" />(meters / second)<br />
+      Launch Angle:<input type = "text" id = "angle" />(degrees)</p>
+      <input type = "submit" value = "Launch" onclick = "launch()" />
+      <script type = "text/javascript" src = "projectile.js"></script>
+   </body>
+</html>
