@@ -1,0 +1,47 @@
+//Author: Ben McGahee
+//Title: Projetile Motion
+//Date: 3/13/2016
+//Purpose:  This script has a function launch() that gets the values of the height, speed, and angle of a projectile entered in
+//the textboxes and calculates certain attributes of the projectile such as the x and y coordinates at time t, the maximum height,
+//time of maximum height, total flight time, and total distance.  It is a useful application for high school and college physics students
+//who are studying 2D kinematics and projectile motion.  
+
+function launch() {
+    //Gets the height, speed, and angle values from the textboxes.
+    var height = document.getElementById("height").value;
+    var speed = document.getElementById("speed").value;
+    var angle = document.getElementById("angle").value;
+   
+    //Converts height, speed, and angle into integers.
+    var parHeight = parseInt(height);
+    var parSpeed = parseInt(speed);
+    var parAngle = parseInt(angle);
+
+    //Calculates the initial velocity in the horizontal and vertical directions of projectile. 
+    //Angle is converted from degrees to radians.
+    var speedX = parSpeed * Math.cos(parAngle * Math.PI / 180);
+    var speedY = parSpeed * Math.sin(parAngle * Math.PI / 180);
+ 
+    //Calculates time at maximum height, total flight time, maximum height, and total distance of projectile.
+    var gravity = 9.8;
+    var midFlightTime = speedY / gravity;
+    var totalFlightTime = 2 * midFlightTime;
+    var roundTime = Math.round(totalFlightTime);
+    var decimalFlightTime = Math.round(totalFlightTime * 100) / 100;
+    var roundMidTime = Math.round(midFlightTime * 100) / 100;
+    var maxHeight = Math.round(parHeight +  midFlightTime * speedY / 2);
+    var distance = speedX * totalFlightTime;
+    var roundDistance = Math.round(distance * 100) / 100;
+    
+    //For Loop displays the x and y coordinates of projectile at time t.
+    for(time = 0; time <= roundTime; time++) {
+        xPosition = speedX * time;
+        yPosition = parHeight + speedY * time - 0.5 * gravity * time * time;
+        document.write("time = " + time + " seconds" + " x-coordinate = " + xPosition + " meters" + " y-coordinate = " + yPosition + " meters" + "<br>");
+    } 
+
+    //Displays maximum height at time t, total flight time, and total distance of projectile.  
+    document.write("maximum height = " + maxHeight + " meters at t = " + roundMidTime + " seconds" + "<br>");
+    document.write("total flight time = " + decimalFlightTime + " seconds" + "<br>");
+    document.write("total distance = " + roundDistance + " meters");
+}
