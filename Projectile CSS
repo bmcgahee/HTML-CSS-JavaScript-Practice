@@ -1,0 +1,16 @@
+#proj {
+font-family: Arial;
+font-style: italic;
+font-weight: 700;
+color: blue;
+}
+
+#par {
+font-family: Arial;
+font-weight: 700;
+color: yellow;
+}
+
+body {
+background-color: #00CD00
+}
