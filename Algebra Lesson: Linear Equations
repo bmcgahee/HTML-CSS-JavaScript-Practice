@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+   <head>
+      <title>Linear Equations</title>
+      <meta charset = "utf-8">
+   </head>
+   <body>
+      <h1>Algebra Lesson: Linear Equations</h1>
+       
+      <p>Consider the following xy table below:</p>
+      
+      <table border = "1" width = "30%" cellpadding = "2" cellspacing = "2">
+          <tr>
+              <th colspan = "2"><br><h3>XY Table</h3>
+              </th>
+          </tr>
+          <tr align = "center">
+             <th>x</th>
+             <th>y</th>
+          </tr>
+          <tr align = "center">
+              <td>0</td>
+              <td>2</td>
+          </tr>
+          <tr align = "center">
+              <td>1</td>
+              <td>5</td>
+          </tr>
+          <tr align = "center">
+              <td>2</td>
+              <td>8</td>
+          </tr>
+          <tr align = "center">
+              <td>3</td>
+              <td>11</td>
+          </tr>
+          <tr align = "center">
+              <td>4</td>
+              <td>14</td>
+          </tr>
+        </table>
+        
+          <p><b>Question:</b> What is the equation of the line described in the table in slope-intercept form?<br><br>
+ 
+          <b>Step 1:</b> Write down the slope-intercept form of a line.<br>
+
+          y = mx + b, where m is the slope and b is the y-intercept.<br><br>
+
+          <b>Step 2:</b> Find the y-intercept.<br>
+
+          The y-intercept is the point (0, b) where the line crosses the y-axis.<br>
+
+          Since we have the point (0, 2) in the table, we see that b = 2, which is the y-intercept.<br><br>
+
+          <b>Step 3:</b> Find the slope.<br>
+
+          For any two points (x<sub>1</sub>, y<sub>1</sub>) and (x<sub>2</sub>,y<sub>2</sub>), the slope m = (y<sub>2</sub>- y<sub>1</sub>) <b>/</b> (x<sub>2</sub>- x<sub>1</sub>).<br>
+          Using the points (0, 2) and (1, 5), we let x<sub>1</sub>= 0, x<sub>2</sub>= 1, y<sub>1</sub>= 2, and y<sub>2</sub> = 5.<br>
+          Then y<sub>2</sub>- y<sub>1</sub>= 5 - 2 = 3, and x<sub>2</sub>- x<sub>1</sub>= 1 - 0 = 1.<br>
+          So, the slope m = <sup>3</sup>&frasl;<sub>1</sub>= 3.<br><br>
+
+          <b>Step 4:</b> Plugging in the values m = 3 and b = 2, we get the linear equation y = 3x + 2 in slope-intercept form.<br><br>
+
+          <b>Step 5:</b> Check your answer.<br>
+
+          If x = 0, then y = 3(0) + 2 = 0 + 2 = 2, which is true since the point (0, 2) is a point on the line (the y-intercept).<br>
+          If x = 1, then y = 3(1) + 2 = 3 + 2 = 5, which is also true since (1, 5) is on the line.<br><br>
+
+          I will let you check the rest of the points on your own. Hope this lesson helps! <b>&#9786;</b>
+          </p>
+   </body>
+</html>
