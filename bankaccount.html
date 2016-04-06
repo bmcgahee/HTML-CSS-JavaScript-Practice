@@ -1,0 +1,117 @@
+//Author: Ben McGahee
+//Title: Bank Account Simulation
+//Date: 4/5/2016
+//Purpose: This JavaScript program simulates a bank account situation.  It allows the user to create a bank account, make a deposit,
+//make a withdrawal, get the account balance, transfer funds from one account to another, and the ability to close an account.
+
+<script type = "text/JavaScript">
+
+var bankAccounts = [];
+
+function createAccount(account) {
+     bankAccounts.push(account);
+     return account;
+}
+
+function closeAccount(account) {
+     bankAccounts.pop(account);
+     document.write(account.customerName + ", your account has been closed." + "<br />");
+}
+
+function showAccounts() {
+  var i = 0;
+  document.write("Here are the existing account(s)..." + "<br />");
+  while(i < bankAccounts.length) {
+    document.write("Customer Name: " + bankAccounts[i].customerName + "<br />");
+    document.write("Account #: " + bankAccounts[i].accountNumber + "<br />");
+    i++;
+  }
+}
+
+function makeDeposit(account, amount) {
+     account.balance = account.balance + amount;
+     document.write(account.customerName + ", you made a deposit of " + "$" + amount + "." + "<br />");
+}
+
+function makeWithdrawal(account, amount) {
+     if(amount <= account.balance) {
+        account.balance = account.balance - amount;
+        document.write(account.customerName + ", you made a withdrawal of " + "$" + amount + "." + "<br />");
+     }
+     else {
+	document.write(account.customerName + ", you have insufficient funds to make a withdrawal." + "<br />");
+     }
+}
+
+function getBalance(account) {
+     document.write(account.customerName + ", your account balance is " + "$" + account.balance + "." + "<br />");
+}
+
+function transferFunds(fromAccount, toAccount, amount) {
+       if(amount <= fromAccount.balance) {
+	   fromAccount.balance = fromAccount.balance - amount;
+           toAccount.balance = toAccount.balance + amount;
+           document.write(fromAccount.customerName + ", you transferred an amount of " + "$" + amount + " to " + toAccount.customerName + "'s account." + "<br />");
+       }
+       else {
+	   document.write(fromAccount + ", you have insufficent funds to make a transfer." + "<br />");
+       }
+}
+
+var benAccount = createAccount({
+    customerName: "Ben",
+    accountNumber: 2743105789,
+    balance: 1500.00
+});
+
+var rickyAccount = createAccount({
+    customerName: "Ricky",
+    accountNumber: 5894210763,
+    balance: 2000.00
+});
+
+document.write("Testing the current balance of each account." + "<br />");
+bensBalance = benAccount.balance;
+rickysBalance = rickyAccount.balance;
+document.write("Ben's current balance is " + "$" + bensBalance + "." + "<br />");
+document.write("Ricky's current balance is: " + "$" + rickysBalance + "." + "<br />" + "<br />");
+
+document.write("Testing deposits of each account." + "<br />");
+makeDeposit(benAccount, 250.00); //Ben deposits $250.00.
+makeDeposit(rickyAccount, 500.00); //Ricky deposits $500.00.
+document.write("<br />");
+
+document.write("Testing withdrawals of each account." + "<br />");
+makeWithdrawal(benAccount, 480.00); //Ben withdraws $480.00.
+makeWithdrawal(rickyAccount, 325.00); //Ricky withdraws $325.00.
+document.write("<br />");
+
+document.write("Testing transfer from Ricky's account to Ben's account." + "<br />");
+transferFunds(rickyAccount, benAccount, 700.00); //Ricky is transferring $700.00 from his account to Ben's account.
+document.write("<br />");
+
+document.write("Testing Ben's account balance and Ricky's account balance." + "<br />");
+getBalance(benAccount);
+getBalance(rickyAccount);
+document.write("<br />");
+
+document.write("Testing Ben's withdrawal of $2000.00.  The withdrawal should decline because he has insufficient funds." + "<br />");
+makeWithdrawal(benAccount, 2000.00);
+document.write("<br />");
+
+document.write("Testing Ben's account balance.  He should have the same amount as before." + "<br />");
+getBalance(benAccount);
+document.write("<br />");
+
+document.write("Testing the closing of Ricky's account." + "<br />");
+closeAccount(rickyAccount);
+document.write("<br />");
+
+document.write("Show remaining account, which is Ben's account." + "<br />");
+showAccounts();
+
+</script>
+
+
+
+    
