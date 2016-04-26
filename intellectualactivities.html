@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Intellectual Activities</title>
+  </head>
+  <body>
+    <h1><i>Intellectual Activities</i></h1>
+    <a id = "math" href = "http://www.math.com">Math</a><br>
+    <script>
+       mathURL = $("math").href;
+       document.write("Do Math @: " + mathURL + "<br>" + "<br>");
+
+       function $(linkID)
+       {
+          return document.getElementById(linkID);
+       }
+    </script>
+    <a id = "chess" href = "https://www.chess.com">Chess</a><br>
+    <script>
+       chessURL = $("chess").href;
+       document.write("Play Chess @: " + chessURL);
+
+       function $(anotherLinkID)
+       {
+          return document.getElementById(anotherLinkID);
+       }
+    </script>
+  </body>
+</html>
