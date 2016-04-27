@@ -1,0 +1,31 @@
+<script> //quick demonstration of OOP in JavaScript
+
+  function Person(name, location, occupation) //constructor of the Person class with name, location, and occupation attributes
+  {
+      this.name = name;
+      this.location = location;
+      this.occupation = occupation;
+
+      this.personIntro = function() //method that introduces the person by telling his/her name, location, and occupation
+      {
+      document.write("Hello, my name is " + this.name + ".<br>");
+      document.write("I live in " + this.location + ".<br>");
+      document.write("I am a " + this.occupation + ".<br>" + "<br>");
+      }
+  }
+
+  var person = new Person("Ben", "Tucson, AZ", "College Student"); //create person object
+
+  document.write("15 years ago...<br>");
+
+  //person introduces himself with the personIntro() method 15 years ago
+  person.personIntro();
+
+  person.location = "Bethlehem, GA";
+  person.occupation = "Software Developer";
+
+  document.write("Today...<br>"); //person introduces himself today
+  person.personIntro();
+ 
+</script>
+
