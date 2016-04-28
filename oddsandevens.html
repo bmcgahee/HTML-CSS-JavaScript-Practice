@@ -1,0 +1,30 @@
+<html>
+  <head>
+     <metacharset = "utf-8">
+     <link rel = "stylesheet" type = "text/css" href = "oddsandevens.css">
+     <script type = "text/javascript" src = "oddsandevens.js"></script>
+  </head>
+  <body>
+     <h1 id = "title">Odds and Evens</h1>
+     <p>This is a game you play against the computer.<br> <!--Explains the rules of Odds and Evens-->
+        You select odds or evens.
+        Here are a couple of cases to consider.<br>
+        <h5 id = caseone>Case 1:</h5>If you select odds, then the computer has evens.<br>
+        You select either 1 or 0 and the computer does the same.<br>
+        Program adds your number and the computer's number together.<br>
+        If the sum of the two numbers is odd then you win.<br>
+        If the sum of the two numbers is even then the computer wins.<br><br>
+        <h5 id = casetwo>Case 2:</h5>If you select evens, then the computer has odds.<br>
+        You select either 1 or 0 and the computer does the same.<br>
+        Program adds your number and the computer's number together.<br>
+        If the sum of the two numbers is even then you win.<br>
+        If the sum of the two numbers is odd then the computer wins.<br><br>
+        Ready to play?  Good luck!</p>
+     <h3 id = "playchoice">Odds or Evens:</h3><input type = "text" id = "oddsevens" /> <!--Type "odds" or "evens" in the textbox-->
+     <h3 id = "number">Choose 1 or 0:</h3><input type = "text" id = "binary" />        <!--Choose either 1 or 0-->
+     <h3 id = "playvalue"></h3>
+     <h3 id = "computervalue"></h3>
+     <h3 id = "result"></h3>
+     <input type = "submit" id = "play" value = "Play" onclick = "play()" /> <!--Click the Play button to find out if you or the computer wins the game.-->
+  </body>
+</html>
