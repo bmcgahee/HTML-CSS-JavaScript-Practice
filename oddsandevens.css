@@ -1,0 +1,76 @@
+#title
+{
+  font-family: arial;
+  font-style: oblique;
+  font-weight: bold;
+  color: purple;
+  text-shadow: 3px 3px yellow;
+}
+
+#caseone
+{
+  font-family: arial;
+  font-style: normal;
+  font-size: 15px;
+}
+
+#casetwo
+{
+  font-family: arial;
+  font-style: normal;
+  font-size: 15px;
+}
+
+#playchoice
+{
+  font-family: arial;
+  font-style: normal;
+  font-weight: bold;
+  color: blue;
+}
+
+#number
+{
+  font-family: arial;
+  font-style: normal;
+  font-weight: bold;
+  color: blue;
+}
+
+#playvalue
+{
+  font-family: arial;
+  font-style: normal;
+  font-weight: bold;
+  color: green;
+}
+
+#computervalue
+{
+  font-family: arial;
+  font-style: normal;
+  font-weight: bold;
+  color: green;
+}
+
+#result
+{
+  font-family: arial;
+  font-style: normal;
+  font-weight: bold;
+  color: red;
+}
+
+#play
+{
+  background-color: yellow;
+  color: purple;
+  font-family: arial;
+  font-style: normal;
+  font-weight: bold;
+}
+
+body
+{
+  background-color: lightblue;
+}
