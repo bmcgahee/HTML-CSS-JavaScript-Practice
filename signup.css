@@ -1,0 +1,74 @@
+#signup
+{
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  font-style: italic;
+  color: red;
+  text-shadow: 1px 1px black;
+}
+
+#instructions
+{
+  font-family: Helvetica, Arial;
+  font-weight: medium;
+  font-size: 15px;
+}
+
+#username
+{
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  color: black;
+  text-shadow: 1px 1px red;
+}
+
+#password
+{
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  color: black;
+  text-shadow: 1px 1px red;
+}
+
+#uname
+{
+   background-color: black;
+   color: #39FF14;
+}
+
+#pword
+{
+   background-color: black;
+   color: #39FF14;
+}
+
+#validateusername
+{
+  color: #F3F315;
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#validatepassword
+{
+  color: #F3F315;
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#signingup
+{
+   background-color: red;
+   color: white;
+   font-weight: bold;
+   height: 35px;
+   width: 80px;
+   cursor: pointer;
+}
+
+body 
+{
+  background-color: #989898;
+}
