@@ -1,0 +1,18 @@
+<html>
+  <head>
+     <title>Sign Up</title>
+     <metacharset = "utf-8">
+     <link rel = "stylesheet" type = "text/css" href = "signup.css">
+     <script type = "text/javascript" src = "testcredentials.js"></script>
+  </head>
+  <body>
+    <h1 id = "signup">Sign Up</h1>
+    <p id = "instructions">Please sign up by creating a username and password.<br> <!--the rules for how to create a valid username and password-->
+    Your username must contain between 5 and 8 characters.  There must be at least one lowercase letter, one uppercase letter, and one number.<br>
+    Your password must contain between 8 and 20 characters.  The requirements for the password are similar to the username except you need at least one special character.
+    </p>
+    <h3 id = "username">Username:</h3><input type = "text" id = "uname" /><h5 id = "validateusername"></h5>  <!--username textbox-->
+    <h3 id = "password">Password:</h3><input type = "text" id = "pword" /><h5 id = "validatepassword"></h5>  <!--password textbox-->
+    <input type = "submit" id = "signingup" value = "Sign Up" onclick = "testCredentials()" />               <!--Sign Up button-->
+  </body>           
+</html>
