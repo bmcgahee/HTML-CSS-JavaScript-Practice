@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <title>Spanish Lesson: Numbers 1-9</title>
+    <script src = "http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  </head>
+  <body>
+     <h3 id = "lesson">Spanish Lesson: Numbers 1-9</h3>
+     <h4>Press any of the keys 1-9 or click one of the corresponding buttons to learn their numbers in Spanish.</h4> <!--Buttons numbered 1-9-->
+     <button id = "one">1</button>
+     <button id = "two">2</button>
+     <button id = "three">3</button>
+     <button id = "four">4</button>
+     <button id = "five">5</button>
+     <button id = "six">6</button>
+     <button id = "seven">7</button>
+     <button id = "eight">8</button>
+     <button id = "nine">9</button>
+     <h3 id = "result"></h3>
+     <script>
+        $("#lesson").css("font-style", "italic") //styling the lesson heading and buttons 1-9 with CSS
+        $("#one").css("background", "red")
+        $("#two").css("background", "orange")
+        $("#three").css("background", "yellow")
+        $("#four").css("background", "green")
+        $("#five").css("background", "blue")
+        $("#six").css("background", "indigo")
+        $("#seven").css("background", "violet")
+        $("#eight").css("background", "pink")
+        $("#nine").css("background", "gray")
+        
+        $(document).keypress(function(event) //keypress event for pressing any of the keys 1-9
+        {
+          key = String.fromCharCode(event.which)
+
+          if(key == "1")
+          {
+            $("#result").css("color", "red");
+            $("#result").html("uno");
+          }
+          else if(key == "2")
+          {
+            $("#result").css("color", "orange");
+            $("#result").html("dos");
+          }
+          else if(key == "3")
+          {
+            $("#result").css("color", "yellow");
+            $("#result").html("tres");
+          }
+          else if(key == "4")
+          {
+            $("#result").css("color", "green");
+            $("#result").html("cuatro");
+          }
+          else if(key == "5")
+          {
+            $("#result").css("color", "blue");
+            $("#result").html("cinco");
+          }
+          else if(key == "6")
+          {
+            $("#result").css("color", "indigo");
+            $("#result").html("seis");
+          }
+          else if(key == "7")
+          {
+            $("#result").css("color", "violet");
+            $("#result").html("siete");
+          }
+          else if(key == "8")
+          {
+            $("#result").css("color", "pink");
+            $("#result").html("ocho");
+          }   
+          else if(key == "9")
+          {
+            $("#result").css("color", "gray");
+            $("#result").html("nueve");
+          }
+          else
+          {
+            $("#result").css("color", "maroon");
+            $("#result").html("Please press one of the number keys 1-9 or click one of the corresponding number buttons.");
+          }
+        })
+
+          $("#one").click(function() //click functions for buttons 1-9
+          {
+             $("#result").css("color", "red")
+             $("#result").html("uno")
+          })
+
+          $("#two").click(function()
+          {
+             $("#result").css("color", "orange")
+             $("#result").html("dos")
+          })
+
+          $("#three").click(function()
+          {
+             $("#result").css("color", "yellow")
+             $("#result").html("tres")
+          })
+
+          $("#four").click(function()
+          {
+             $("#result").css("color", "green")
+             $("#result").html("cuatro")
+          })
+
+          $("#five").click(function()
+          {
+             $("#result").css("color", "blue")
+             $("#result").html("cinco")
+          })
+
+          $("#six").click(function()
+          {
+             $("#result").css("color", "indigo")
+             $("#result").html("seis")
+          })
+
+          $("#seven").click(function()
+          {
+             $("#result").css("color", "violet")
+             $("#result").html("siete")
+          })
+
+          $("#eight").click(function()
+          {
+             $("#result").css("color", "pink")
+             $("#result").html("ocho")
+          })
+
+          $("#nine").click(function()
+          {
+             $("#result").css("color", "gray")
+             $("#result").html("nueve")
+          })
+     </script>
+  </body>
+</html>
