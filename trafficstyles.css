@@ -1,0 +1,250 @@
+#red 
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 4px;
+  background-color: red;
+}
+
+#yellow 
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 4px;
+  background-color: yellow;
+}
+
+#green
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 4px;
+  background-color: lime;
+}
+
+#light
+{
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  font-style: italic;
+}
+
+#power
+{
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  border: 8px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#trivia
+{
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  border: 7px;
+  background-color: magenta;
+  color: yellow;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#q1
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 5px;
+  background-color: cyan;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#q2
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 5px;
+  background-color: cyan;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#q3
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 5px;
+  background-color: cyan;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#questions
+{
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  font-style: italic;
+}
+
+#rules
+{
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  font-style: italic;
+}
+
+#trafficed
+{
+  background-color: yellow;
+  border: 10px dotted black;
+  box-shadow: 2px 2px lime;
+}
+
+#traffic
+{
+  color: purple;
+  font-weight: bold;
+  font-family: Arial;
+  font-size: 3em;
+  text-align: center;
+  text-shadow: 2px 2px lime;
+}
+
+#redrule
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 5px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#yellowrule
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 5px;
+  background-color: yellow;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#greenrule
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 5px;
+  background-color: lime;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#stats
+{
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  font-style: italic;
+}
+
+#firststat
+{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 6px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#secondstat
+{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 6px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#thirdstat
+{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 6px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#fourthstat
+{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 6px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#fifthstat
+{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 6px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+body
+{
+  background-color: gray;
+}
+
