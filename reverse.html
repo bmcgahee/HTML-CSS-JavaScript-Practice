@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>Reverse</title>
+  <style>
+     body {background-color: black;}
+     h1 {color: lightgreen; font-style: italic; font-family: Arial, "Times New Roman", Helvetica}
+     #string {background-color: blue; color: yellow; font-family: Arial, "Times New Roman", Helvetica; font-size: 20px; height: 40px;}
+     button {background-color: yellow; color: purple; height: 45px; width: 70px; font-weight: bold;}
+     #instructions, #result {color: white; font-family: Arial, "Times New Roman", Helvetica; font-weight: bold;}
+  </style>
+  <script>
+     function reverse() {
+        var output = "";
+        var reverse = "";
+        var string = document.getElementById("string").value;
+        if(string == "" || string.length < 2) {
+           output = "Please enter a string of 2 or more characters.";
+           document.getElementById("result").innerHTML = output;
+        } else {
+           for(i = string.length - 1; i >= 0; i--) {
+              reverse += string[i];
+           }
+           var chars = string.length;
+           output = reverse;
+           var palindrome = output + " is a palindrome of " + chars + " characters.";
+           if(output == string) {
+              document.getElementById("result").innerHTML = palindrome;
+           } else {
+               document.getElementById("result").innerHTML = "Your reverse string of " + chars + " characters is: " + output;
+           }
+         }
+       }            
+  </script>
+</head>
+<body>
+   <h1>Reverse String</h1>
+   <p id = "instructions">Please input a string of 2 or more characters and click the reverse button.</p>
+   <input id = "string">
+   <button type = "button" onclick = "reverse()">Reverse</button>
+   <p id = "result"></p>
+</body>
+</html>
